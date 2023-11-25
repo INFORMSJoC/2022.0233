@@ -85,6 +85,7 @@ tar -xzvf preprocessing.tar.gz
 tar -xzvf primal_bound_quality.tar.gz
 cd ../
 ```
+Note that the results, uncompressed, total to 5.1 gigabytes.
 
 ## Executing Experiments
 To execute experiments outlined in the "Computational Experiments" section of the article and beyond, a number of convenience scripts are provided, which are stored the `scripts/execution` directory.
