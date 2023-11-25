@@ -1,0 +1,185 @@
+[TITLE]
+ AT(M) Network - 24 Time Steps, Day 2
+
+[JUNCTIONS]
+;ID       Elev          Demand        Pattern
+ J20      6.096000      31.55000      demand ;
+ J30      15.24000      12.62000      demand ;
+ J110     15.24000      31.55000      demand ;
+ J70      15.24000      31.55000      demand ;
+ J60      15.24000      31.55000      demand ;
+ J90      15.24000      63.09000      demand ;
+ J100     15.24000      31.55000      demand ;
+ J40      15.24000      12.62000      demand ;
+ J50      15.24000      12.62000      demand ;
+ J80      15.24000      31.55000      demand ;
+ J150     36.57600      12.62000      demand ;
+ J140     24.38400      12.62000      demand ;
+ J170     36.57600      12.62000      demand ;
+ J130     36.57600      12.62000      demand ;
+ J160     36.57600      50.47000      demand ;
+ J120     36.57600      12.62000      demand ;
+ J55      24.38400      6.310000      demand ;
+ J75      24.38400      6.310000      demand ;
+ J115     24.38400      6.310000      demand ;
+
+[RESERVOIRS]
+;ID      Head      Pattern
+ R1      3.048            ;
+ R2      3.048            ;
+ R3      3.048            ;
+
+[TANKS]
+;ID        Elevation      InitLevel      MinLevel       MaxLevel       Diameter       MinVol             VolCurve
+ T65       0.00000        66.93          66.53          72.00          21.549974      24266.000000               ;
+ T165      0.00000        66.93          66.53          72.00          30.476266      48532.000000               ;
+
+[PIPES]
+;ID            Node1     Node2    Length      Diameter      Roughness      MinorLoss      Status
+ J20J30        J20       J30      3657.6      609.60        120.00000      0.0            Open  ;
+ J30J60        J30       J60      1828.8      508.00        120.00000      0.0            Open  ;
+ J60J90        J60       J90      1828.8      152.40        120.00000      0.0            Open  ;
+ J70J60        J70       J60      1828.8      406.40        120.00000      0.0            Open  ;
+ J70J90        J70       J90      1828.8      254.00        120.00000      0.0            Open  ;
+ J20J70        J20       J70      3657.6      609.60        120.00000      0.0            Open  ;
+ J20J110       J20       J110     3657.6      457.20        120.00000      0.0            Open  ;
+ J110J100      J110      J100     1828.8      304.80        120.00000      0.0            Open  ;
+ J100J90       J100      J90      1828.8      508.00        120.00000      0.0            Open  ;
+ J70J100       J70       J100     1828.8      609.60        120.00000      0.0            Open  ;
+ J30J40        J30       J40      1828.8      203.20        120.00000      0.0            Open  ;
+ J40J50        J40       J50      1828.8      304.80        120.00000      0.0            Open  ;
+ J50J80        J50       J80      1828.8      203.20        120.00000      0.0            Open  ;
+ J80J60        J80       J60      1828.8      457.20        120.00000      0.0            Open  ;
+ J80J90        J80       J90      1828.8      406.40        120.00000      0.0            Open  ;
+ J50J140       J50       J140     3657.6      203.20        120.00000      0.0            Open  ;
+ J140J80       J140      J80      1828.8      304.80        120.00000      0.0            Open  ;
+ J80J150       J80       J150     1828.8      457.20        120.00000      0.0            Open  ;
+ J150J90       J150      J90      1828.8      152.40        120.00000      0.0            Open  ;
+ J150J100      J150      J100     1828.8      609.60        120.00000      0.0            Open  ;
+ J150J140      J150      J140     1828.8      508.00        120.00000      0.0            Open  ;
+ J140J170      J140      J170     3657.6      304.80        120.00000      0.0            Open  ;
+ J170J130      J170      J130     1828.8      304.80        120.00000      0.0            Open  ;
+ J130J160      J130      J160     1828.8      406.40        120.00000      0.0            Open  ;
+ J160J150      J160      J150     1828.8      355.60        120.00000      0.0            Open  ;
+ J160J110      J160      J110     1828.8      304.80        120.00000      0.0            Open  ;
+ J110J120      J110      J120     1828.8      355.60        120.00000      0.0            Open  ;
+ J120J130      J120      J130     1828.8      304.80        120.00000      0.0            Open  ;
+ J140J160      J140      J160     1828.8      508.00        120.00000      0.0            Open  ;
+ J100J160      J100      J160     1828.8      457.20        120.00000      0.0            Open  ;
+ J50J30        J50       J30      2743.2      355.60        120.00000      0.0            Open  ;
+ T65J60        T65       J60      30.480      508.00        120.00000      0.0            Open  ;
+ T165J160      T165      J160     30.480      406.40        120.00000      0.0            Open  ;
+ J70J30        J70       J30      2743.2      355.60        120.00000      0.0            Open  ;
+ J50J55        J50       J55      1828.8      304.80        120.00000      0.0            Open  ;
+ J55J75        J55       J75      1828.8      304.80        120.00000      0.0            Open  ;
+ J75J115       J75       J115     1828.8      304.80        120.00000      0.0            Open  ;
+ J115J140      J115      J140     1828.8      304.80        120.00000      0.0            Open  ;
+ J75J140       J75       J140     1828.8      304.80        120.00000      0.0            Open  ;
+ J140T165      J140      T165     30.480      406.40        120.00000      0.0            Open  ;
+ J160J120      J160      J120     2743.2      304.80        120.00000      0.0            Open  ;
+
+[PUMPS]
+;ID          Node1       Node2      Parameters
+ PUMP_1      R1          J20        HEAD PUMP_123;
+ PUMP_2      R2          J20        HEAD PUMP_123;
+ PUMP_3      R3          J20        HEAD PUMP_123;
+
+[VALVES]
+;ID      Node1      Node2      Diameter      Type      Setting      MinorLoss
+
+[TAGS]
+
+[DEMANDS]
+;Junction      Demand      Pattern      Category
+
+[STATUS]
+;ID      Status/Setting
+
+[PATTERNS]
+;ID          Multipliers
+ demand      0.700000 0.700000 0.650000 0.650000 0.600000 0.600000
+ demand      1.200000 1.200000 1.250000 1.250000 1.300000 1.300000
+ demand      1.200000 1.200000 1.100000 1.100000 1.000000 1.000000
+ demand      0.900000 0.900000 0.800000 0.800000 0.700000 0.700000
+ tariff      40.77000 40.77000 40.77000 40.77000 40.77000 40.77000
+ tariff      54.23000 54.23000 66.04500 66.04500 74.48500 74.48500
+ tariff      71.46750 71.46750 72.97750 72.97750 78.48000 78.48000
+ tariff      62.96000 62.96000 50.87500 50.87500 48.66750 48.66750
+
+[CURVES]
+;ID            X-Value         Y-Value
+ PUMP_123      0.00000000      91.440000
+ PUMP_123      126.200000      89.001600
+ PUMP_123      252.400000      82.296000
+ PUMP_123      378.500000      70.104000
+ PUMP_123      504.700000      55.168800
+
+[CONTROLS]
+
+[RULES]
+
+[ENERGY]
+ Global Efficiency      100.0
+ Global Price           1.0
+ Demand Charge          0.0
+ Pump   PUMP_1          Pattern      tariff
+ Pump   PUMP_2          Pattern      tariff
+ Pump   PUMP_3          Pattern      tariff
+
+[EMITTERS]
+;Junction      Coefficient
+
+[QUALITY]
+;Node      InitQual
+
+[SOURCES]
+;Node      Type      Quality      Pattern
+
+[REACTIONS]
+
+[MIXING]
+;Tank      Model
+
+[TIMES]
+ Duration                24:00
+ Hydraulic Timestep      1:00
+ Quality Timestep        1:00
+ Pattern Timestep        1:00
+ Pattern Start           0:00
+ Report Timestep         1:00
+ Report Start            0:00
+ Start ClockTime         12 AM
+ Statistic               NONE
+
+[REPORT]
+ Status       Yes
+ Summary      No
+ Page         0
+
+[OPTIONS]
+ Units                  LPS
+ Headloss               H-W
+ Specific Gravity       1.0
+ Viscosity              1.0
+ Trials                 200
+ Accuracy               0.00001
+ Unbalanced             Continue 100
+ Pattern                1
+ Demand Multiplier      1.0
+ Emitter Exponent       0.5
+ Quality                None mg/L
+ Diffusivity            1.0
+ Tolerance              0.001
+
+[COORDINATES]
+;Node      X-Coord      Y-Coord
+
+[VERTICES]
+;Link      X-Coord      Y-Coord
+
+[LABELS]
+;X-Coord      Y-Coord      Label & Anchor Node
+
+[BACKDROP]
+
+[END]

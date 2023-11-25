@@ -1,0 +1,49 @@
+{
+    "per_unit": false,
+    "base_mass": 2.0e17,
+    "base_time": 36000.0,
+    "base_length": 15.0,
+    "base_head": 15.0,
+    "base_flow": 0.09375,
+    "reservoir": {
+        "1": {
+            "flow_cost": 0.0
+        }
+    },
+    "pump": {
+        "1": {
+            "max_switches": 18,
+            "min_active_time": 3600.0,
+            "min_inactive_time": 1800.0,
+            "pump_type": 3,
+            "power_fixed": 53.944943,
+            "power_per_unit_flow": 195.685
+        },
+        "2": {
+            "max_switches": 18,
+            "min_active_time": 3600.0,
+            "min_inactive_time": 1800.0,
+            "pump_type": 3,
+            "power_fixed": 53.944943,
+            "power_per_unit_flow": 195.685
+        },
+        "3": {
+            "max_switches": 18,
+            "min_active_time": 3600.0,
+            "min_inactive_time": 1800.0,
+            "pump_type": 3,
+            "power_fixed": 53.944943,
+            "power_per_unit_flow": 195.685
+        }
+    },
+    "pump_group": {
+        "1": {
+            "pump_indices": [1, 2, 3]
+        }
+    },
+    "tank_group": {
+        "1": {
+            "tank_indices": [1]
+        }
+    }
+}

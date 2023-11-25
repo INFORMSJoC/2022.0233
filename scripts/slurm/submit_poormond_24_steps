@@ -1,0 +1,34 @@
+#!/bin/bash
+# Execute preprocessing jobs in the required order and store job IDs.
+PREPROCESSING_NONE_JOB=$(sbatch --array=37-41 ./scripts/slurm/preprocessing-none)
+PREPROCESSING_NONE_ID=`echo ${PREPROCESSING_NONE_JOB} | sed -n -e 's/^.*job //p' `
+PREPROCESSING_BT_OA_SS_JOB=$(sbatch --array=37-41 --time=0-00:05:00 --dependency=aftercorr:${PREPROCESSING_NONE_ID} ./scripts/slurm/preprocessing-bt-oa-ss)
+PREPROCESSING_BT_OA_SS_ID=`echo ${PREPROCESSING_BT_OA_SS_JOB} | sed -n -e 's/^.*job //p' `
+PREPROCESSING_BT_PW_SS_JOB=$(sbatch --array=37-41 --time=0-00:05:00 --dependency=aftercorr:${PREPROCESSING_BT_OA_SS_ID} ./scripts/slurm/preprocessing-bt-pw-ss)
+PREPROCESSING_BT_PW_SS_ID=`echo ${PREPROCESSING_BT_PW_SS_JOB} | sed -n -e 's/^.*job //p' `
+PREPROCESSING_BT_PW_SQ_JOB=$(sbatch --array=37-41 --time=0-00:30:00 --dependency=aftercorr:${PREPROCESSING_BT_PW_SS_ID} ./scripts/slurm/preprocessing-bt-pw-sq)
+PREPROCESSING_BT_PW_SQ_ID=`echo ${PREPROCESSING_BT_PW_SQ_JOB} | sed -n -e 's/^.*job //p' `
+PREPROCESSING_BT_OA_OWF_JOB=$(sbatch --array=37-41 --time=0-02:00:00 --dependency=aftercorr:${PREPROCESSING_BT_PW_SQ_ID} ./scripts/slurm/preprocessing-bt-oa-owf)
+PREPROCESSING_BT_OA_OWF_ID=`echo ${PREPROCESSING_BT_OA_OWF_JOB} | sed -n -e 's/^.*job //p' `
+PREPROCESSING_BT_PW_OWF_JOB=$(sbatch --array=37-41 --time=0-16:00:00 --dependency=aftercorr:${PREPROCESSING_BT_OA_OWF_ID} ./scripts/slurm/preprocessing-bt-pw-owf)
+PREPROCESSING_BT_PW_OWF_ID=`echo ${PREPROCESSING_BT_PW_OWF_JOB} | sed -n -e 's/^.*job //p' `
+PREPROCESSING_OBCG_JOB=$(sbatch --array=37-41 --time=0-01:00:00 --dependency=aftercorr:${PREPROCESSING_BT_PW_OWF_ID} ./scripts/slurm/preprocessing-obcg)
+PREPROCESSING_OBCG_ID=`echo ${PREPROCESSING_OBCG_JOB} | sed -n -e 's/^.*job //p' `
+
+# Execute dual bound improvement jobs, dependent on the preprocessing jobs.
+sbatch --array=37-41 --dependency=aftercorr:${PREPROCESSING_NONE_ID}      ./scripts/slurm/dual_bound_improvement-none
+sbatch --array=37-41 --dependency=aftercorr:${PREPROCESSING_BT_OA_SS_ID}  ./scripts/slurm/dual_bound_improvement-bt-oa-ss
+sbatch --array=37-41 --dependency=aftercorr:${PREPROCESSING_BT_PW_SS_ID}  ./scripts/slurm/dual_bound_improvement-bt-pw-ss
+sbatch --array=37-41 --dependency=aftercorr:${PREPROCESSING_BT_PW_SQ_ID}  ./scripts/slurm/dual_bound_improvement-bt-pw-sq
+sbatch --array=37-41 --dependency=aftercorr:${PREPROCESSING_BT_OA_OWF_ID} ./scripts/slurm/dual_bound_improvement-bt-oa-owf
+sbatch --array=37-41 --dependency=aftercorr:${PREPROCESSING_BT_PW_OWF_ID} ./scripts/slurm/dual_bound_improvement-bt-pw-owf
+sbatch --array=37-41 --dependency=aftercorr:${PREPROCESSING_BT_PW_OWF_ID} ./scripts/slurm/dual_bound_improvement-dual_cuts
+sbatch --array=37-41 --dependency=aftercorr:${PREPROCESSING_OBCG_ID}      ./scripts/slurm/dual_bound_improvement-obcg
+
+# Execute the primal bound quality experiments, dependent on the OBCG preprocessing.
+sbatch --array=37-41 --dependency=aftercorr:${PREPROCESSING_OBCG_ID} ./scripts/slurm/primal_bound_quality-milp-oa-1m
+sbatch --array=37-41 --dependency=aftercorr:${PREPROCESSING_OBCG_ID} ./scripts/slurm/primal_bound_quality-milp-oa-5m
+sbatch --array=37-41 --dependency=aftercorr:${PREPROCESSING_OBCG_ID} ./scripts/slurm/primal_bound_quality-milp-oa-25m
+sbatch --array=37-41 --dependency=aftercorr:${PREPROCESSING_OBCG_ID} ./scripts/slurm/primal_bound_quality-milp-pw-1m
+sbatch --array=37-41 --dependency=aftercorr:${PREPROCESSING_OBCG_ID} ./scripts/slurm/primal_bound_quality-milp-pw-5m
+sbatch --array=37-41 --dependency=aftercorr:${PREPROCESSING_OBCG_ID} ./scripts/slurm/primal_bound_quality-milp-pw-25m

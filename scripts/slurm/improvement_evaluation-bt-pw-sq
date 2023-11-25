@@ -1,0 +1,40 @@
+#!/bin/bash
+#SBATCH --exclusive
+#SBATCH --time=0-01:05:00
+#SBATCH --mail-user=btasseff@lanl.gov
+#SBATCH --mail-type=END
+#SBATCH --output=/dev/null --error=/dev/null
+
+# Set important environment variables first.
+source .profile
+
+# Read in the experiment CSV file and separate values by comma.
+EXPERIMENT_CSV_PATH="data/experiments/improvement_evaluation/MILP-OA-1m-BT-PW-SQ.csv"
+LINE_NUMBER=${SLURM_ARRAY_TASK_ID}
+LINE_STRING=$(sed "${LINE_NUMBER}q;d" ${EXPERIMENT_CSV_PATH})
+IFS=',' read -a PARAMETER_ARRAY <<< "${LINE_STRING}"
+
+# Set up variables for notational ease.
+INSTANCE_PATH=${PARAMETER_ARRAY[0]}
+CUTS_PATH=${PARAMETER_ARRAY[1]}
+FORMULATION=${PARAMETER_ARRAY[2]}
+ERROR_TOLERANCE=${PARAMETER_ARRAY[3]}
+RELAX_DIRECTION=${PARAMETER_ARRAY[4]}
+RESULT_PATH=${PARAMETER_ARRAY[5]}
+LOG_PATH=${PARAMETER_ARRAY[6]}
+
+# Get the sysimage path.
+SYSIMAGE_PATH="scripts/precompilation/WaterModels.so"
+
+# Execute the script.
+julia \
+    -J${SYSIMAGE_PATH} \
+    scripts/execution/improvement_evaluation.jl \
+    --input_path ${INSTANCE_PATH} \
+    --cuts_path ${CUTS_PATH} \
+    --output_path ${RESULT_PATH} \
+    --time_limit 3600.0 \
+    --error_tolerance ${ERROR_TOLERANCE} \
+    --formulation ${FORMULATION} \
+    --relax_direction ${RELAX_DIRECTION} \
+    &> ${LOG_PATH}

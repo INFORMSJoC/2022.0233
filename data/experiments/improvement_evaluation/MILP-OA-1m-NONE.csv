@@ -1,0 +1,6 @@
+instance_path,cuts_path,formulation,error_tol,relax_direction,result_path,log_path
+results/preprocessing/Poormond-48_Steps-Day_1-NONE.json,data/instances/Poormond/initial_cuts.json,WM.LRDWaterModel,1.0,true,results/improvement_evaluation/Poormond-48_Steps-Day_1-NONE.json,results/improvement_evaluation/Poormond-48_Steps-Day_1-NONE.log
+results/preprocessing/Poormond-48_Steps-Day_2-NONE.json,data/instances/Poormond/initial_cuts.json,WM.LRDWaterModel,1.0,true,results/improvement_evaluation/Poormond-48_Steps-Day_2-NONE.json,results/improvement_evaluation/Poormond-48_Steps-Day_2-NONE.log
+results/preprocessing/Poormond-48_Steps-Day_3-NONE.json,data/instances/Poormond/initial_cuts.json,WM.LRDWaterModel,1.0,true,results/improvement_evaluation/Poormond-48_Steps-Day_3-NONE.json,results/improvement_evaluation/Poormond-48_Steps-Day_3-NONE.log
+results/preprocessing/Poormond-48_Steps-Day_4-NONE.json,data/instances/Poormond/initial_cuts.json,WM.LRDWaterModel,1.0,true,results/improvement_evaluation/Poormond-48_Steps-Day_4-NONE.json,results/improvement_evaluation/Poormond-48_Steps-Day_4-NONE.log
+results/preprocessing/Poormond-48_Steps-Day_5-NONE.json,data/instances/Poormond/initial_cuts.json,WM.LRDWaterModel,1.0,true,results/improvement_evaluation/Poormond-48_Steps-Day_5-NONE.json,results/improvement_evaluation/Poormond-48_Steps-Day_5-NONE.log

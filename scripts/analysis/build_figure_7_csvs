@@ -1,0 +1,9 @@
+#!/bin/bash
+python3 scripts/analysis/mip_log_to_csv.py results/improvement_evaluation_long/Poormond-48_Steps-Day_4-NONE.log      results/postprocessed/Poormond-48_Steps-Day_4-Long-NONE.csv
+python3 scripts/analysis/mip_log_to_csv.py results/improvement_evaluation_long/Poormond-48_Steps-Day_4-BT-OA-SS.log  results/postprocessed/Poormond-48_Steps-Day_4-Long-BT-OA-SS.csv
+python3 scripts/analysis/mip_log_to_csv.py results/improvement_evaluation_long/Poormond-48_Steps-Day_4-BT-PW-SS.log  results/postprocessed/Poormond-48_Steps-Day_4-Long-BT-PW-SS.csv
+python3 scripts/analysis/mip_log_to_csv.py results/improvement_evaluation_long/Poormond-48_Steps-Day_4-BT-PW-SQ.log  results/postprocessed/Poormond-48_Steps-Day_4-Long-BT-PW-SQ.csv
+python3 scripts/analysis/mip_log_to_csv.py results/improvement_evaluation_long/Poormond-48_Steps-Day_4-BT-OA-OWF.log results/postprocessed/Poormond-48_Steps-Day_4-Long-BT-OA-OWF.csv
+python3 scripts/analysis/mip_log_to_csv.py results/improvement_evaluation_long/Poormond-48_Steps-Day_4-BT-PW-OWF.log results/postprocessed/Poormond-48_Steps-Day_4-Long-BT-PW-OWF.csv
+python3 scripts/analysis/mip_log_to_csv.py results/improvement_evaluation_long/Poormond-48_Steps-Day_4-DUAL_CUTS.log results/postprocessed/Poormond-48_Steps-Day_4-Long-DUAL_CUTS.csv
+python3 scripts/analysis/mip_log_to_csv.py results/improvement_evaluation_long/Poormond-48_Steps-Day_4-OBCG.log      results/postprocessed/Poormond-48_Steps-Day_4-Long-OBCG.csv

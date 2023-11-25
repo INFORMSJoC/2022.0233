@@ -1,0 +1,24 @@
+[info | WaterModels]: [OBBT] Time limit set to 1.0 seconds.
+[info | WaterModels]: [OBBT] Initial bound widths: Head range: 10.327, pipe flow range: 2.035, valve flow range: 119.798, pump flow range: 1.959.
+[info | WaterModels]: [OBBT] Solving 438 subproblems.
+Gurobi Optimizer version 9.1.2 build v9.1.2rc0 (linux64)
+Thread count: 128 physical cores, 256 logical processors, using up to 1 threads
+Optimize a model with 664 rows, 346 columns and 1535 nonzeros
+Model fingerprint: 0xf5aad624
+Coefficient statistics:
+  Matrix range     [4e-04, 8e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [3e-03, 6e+01]
+  RHS range        [1e-02, 6e+01]
+Presolve removed 436 rows and 234 columns
+Presolve time: 0.02s
+Presolved: 228 rows, 112 columns, 685 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    4.2416809e-04   8.857893e+01   0.000000e+00      0s
+      55    1.2373008e-01   0.000000e+00   0.000000e+00      0s
+
+Solved in 55 iterations and 0.03 seconds
+Optimal objective  1.237300809e-01
+
+User-callback calls 110, time in user-callback 0.00 sec
