@@ -73,6 +73,19 @@ After the system image has been built, for convenience, you can set the followin
 export SYSIMAGE_PATH="scripts/precompilation/WaterModels.so"
 ```
 
+### Decompressing Results
+The size of some `results` subdirectories are large and have thus been stored as compressed tarballs.
+To decompress these subdirectories, from the root project directory, execute the following
+```bash
+cd results
+tar -xzvf dual_bound_improvement.tar.gz
+tar -xzvf improvement_evaluation.tar.gz
+tar -xzvf improvement_evaluation_long.tar.gz
+tar -xzvf preprocessing.tar.gz
+tar -xzvf primal_bound_quality.tar.gz
+cd ../
+```
+
 ## Executing Experiments
 To execute experiments outlined in the "Computational Experiments" section of the article and beyond, a number of convenience scripts are provided, which are stored the `scripts/execution` directory.
 Below, we provide an example of executing these scripts in the order of experiments performed throughout the article.
