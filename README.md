@@ -3,7 +3,7 @@
 # Polyhedral Relaxations for Optimal Pump Scheduling of Potable Water Distribution Networks
 This archive is distributed in association with the [INFORMS Journal on Computing](https://pubsonline.informs.org/journal/ijoc) under a BSD license as part of the Multi-Infrastructure Control and Optimization Toolkit (MICOT) project at Los Alamos National Laboratory, LA-CC-13-108.
 
-The software and data in this repository comprise a snapshot of similar artifacts used in the production of the article [_Polyhedral Relaxations for Optimal Pump Scheduling of Potable Water Distribution Networks_](https://example.com) by B. Tasseff, R. Bent, C. Coffrin, C. Barrows, D. Sigler, J. Stickel, A. S. Zamzam, Y. Liu, and P. Van Hentenryck.
+The software and data in this repository comprise a snapshot of similar artifacts used in the production of the article [_Polyhedral Relaxations for Optimal Pump Scheduling of Potable Water Distribution Networks_](https://doi.org/10.1287/ijoc.2022.0233) by B. Tasseff, R. Bent, C. Coffrin, C. Barrows, D. Sigler, J. Stickel, A. S. Zamzam, Y. Liu, and P. Van Hentenryck.
 This snapshot is based on the specific inputs and software found in the `data` and `src` directories, respectively.
 Snapshots of unprocessed experimental outputs are provided in the subdirectories of `results`.
 Finally, various precompilation, execution, batch cluster submission, and analytical postprocessing utilities are provided in the `scripts` directory.
@@ -19,7 +19,7 @@ However, be mindful that some of the novel features evaluated in this article (e
 Please post an [issue](https://github.com/lanl-ansi/WaterModels.jl/issues) to the WaterModels project if there is interest in having these features supported in a future release.
 
 ## Citing
-To cite the contents of this repository, please cite both the article and this repository using their respective digital object identifiers (DOIs), i.e., [example](https://doi.org/example) and [example.cd](https://doi.org/example.cd).
+To cite the contents of this repository, please cite both the article and this repository using their respective digital object identifiers (DOIs), i.e., [10.1287/ijoc.2022.0233](https://doi.org/10.1287/ijoc.2022.0233) and [10.1287/ijoc.2022.0233.cd](https://doi.org/10.1287/ijoc.2022.0233.cd).
 Below is a BibTeX entry that may be used for citing this respoitory:
 ```
 @article{tasseff+:ijoc2023:repository,
@@ -27,8 +27,8 @@ Below is a BibTeX entry that may be used for citing this respoitory:
   publisher =     {INFORMS Journal on Computing},
   title =         {Polyhedral Relaxations for Optimal Pump Scheduling of Potable Water Distribution Networks},
   year =          {2023},
-  doi =           {example.cd},
-  url =           {https://github.com/INFORMSJoC/example}
+  doi =           {10.1287/ijoc.2022.0233.cd},
+  note =          {Available for download at https://github.com/INFORMSJoC/2022.0233}
 }
 ```
 
