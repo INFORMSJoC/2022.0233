@@ -22,7 +22,7 @@ Please post an [issue](https://github.com/lanl-ansi/WaterModels.jl/issues) to th
 To cite the contents of this repository, please cite both the article and this repository using their respective digital object identifiers (DOIs), i.e., [10.1287/ijoc.2022.0233](https://doi.org/10.1287/ijoc.2022.0233) and [10.1287/ijoc.2022.0233.cd](https://doi.org/10.1287/ijoc.2022.0233.cd).
 Below is a BibTeX entry that may be used for citing this respoitory:
 ```
-@article{tasseff+:ijoc2023:repository,
+@misc{tasseff+:ijoc2023:repository,
   author =        {Byron Tasseff and Russell Bent and Carleton Coffrin and Clayton Barrows and Devon Sigler and Jonathan Stickel and Ahmed S. Zamzam and Yang Liu and Pascal Van Hentenryck},
   publisher =     {INFORMS Journal on Computing},
   title =         {Polyhedral Relaxations for Optimal Pump Scheduling of Potable Water Distribution Networks},
