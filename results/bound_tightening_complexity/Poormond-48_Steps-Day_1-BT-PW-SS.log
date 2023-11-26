@@ -1,0 +1,50 @@
+[info | WaterModels]: [OBBT] Time limit set to 1.0 seconds.
+[info | WaterModels]: [OBBT] Initial bound widths: Head range: 3.557, pipe flow range: 1.899, valve flow range: 0.919, pump flow range: 1.609.
+[info | WaterModels]: [OBBT] Solving 438 subproblems.
+Gurobi Optimizer version 9.1.2 build v9.1.2rc0 (linux64)
+Thread count: 128 physical cores, 256 logical processors, using up to 1 threads
+Optimize a model with 1059 rows, 629 columns and 2589 nonzeros
+Model fingerprint: 0xa1a82b7d
+Variable types: 469 continuous, 160 integer (160 binary)
+Coefficient statistics:
+  Matrix range     [4e-04, 1e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [3e-03, 2e+01]
+  RHS range        [1e-02, 1e+01]
+
+User MIP start did not produce a new incumbent solution
+User MIP start violates constraint R0 by 0.001316968
+
+Presolve removed 721 rows and 393 columns
+Presolve time: 0.01s
+Presolved: 338 rows, 236 columns, 1039 nonzeros
+Variable types: 182 continuous, 54 integer (54 binary)
+
+Root relaxation: objective 2.170709e-01, 79 iterations, 0.00 seconds
+Another try with MIP start
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+H    0     0                       0.2271131    0.21330  6.08%     -    0s
+     0     0    0.21707    0    8    0.22711    0.21707  4.42%     -    0s
+     0     0     cutoff    0         0.22711    0.22711  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 4
+  Cover: 5
+  Implied bound: 9
+  MIR: 9
+  Flow cover: 24
+  RLT: 4
+  Relax-and-lift: 10
+
+Explored 1 nodes (125 simplex iterations) in 0.04 seconds
+Thread count was 1 (of 256 available processors)
+
+Solution count 1: 0.227113 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.271131392952e-01, best bound 2.271131392952e-01, gap 0.0000%
+
+User-callback calls 114, time in user-callback 0.00 sec

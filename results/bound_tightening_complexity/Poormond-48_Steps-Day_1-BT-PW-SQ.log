@@ -1,0 +1,40 @@
+[info | WaterModels]: [OBBT] Beginning multistep OBBT routine.
+[info | WaterModels]: [OBBT] Starting OBBT for network with multinetwork index 1.
+[info | WaterModels]: [OBBT] Time limit set to 1.0 seconds.
+[info | WaterModels]: [OBBT] Initial bound widths: Head range: 2.842, pipe flow range: 1.87, valve flow range: 0.89, pump flow range: 1.154.
+[info | WaterModels]: [OBBT] Solving 436 subproblems.
+Gurobi Optimizer version 9.1.2 build v9.1.2rc0 (linux64)
+Thread count: 128 physical cores, 256 logical processors, using up to 1 threads
+Optimize a model with 1076 rows, 609 columns and 2588 nonzeros
+Model fingerprint: 0xf7d8d950
+Variable types: 454 continuous, 155 integer (155 binary)
+Coefficient statistics:
+  Matrix range     [4e-04, 1e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e-03, 2e+01]
+  RHS range        [2e-03, 2e+01]
+
+User MIP start did not produce a new incumbent solution
+User MIP start violates constraint R0 by 0.004171778
+
+Presolve removed 915 rows and 507 columns
+Presolve time: 0.04s
+Presolved: 161 rows, 102 columns, 500 nonzeros
+Variable types: 75 continuous, 27 integer (27 binary)
+
+Root relaxation: objective 2.652374e-01, 7 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0       0.2652374    0.26524  0.00%     -    0s
+
+Explored 0 nodes (7 simplex iterations) in 0.07 seconds
+Thread count was 1 (of 256 available processors)
+
+Solution count 1: 0.265237 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.652373803648e-01, best bound 2.652373803648e-01, gap 0.0000%
+
+User-callback calls 119, time in user-callback 0.00 sec

@@ -1,0 +1,9 @@
+#!/bin/bash
+sbatch ./scripts/slurm/improvement_evaluation_long-none
+sbatch ./scripts/slurm/improvement_evaluation_long-bt-oa-ss
+sbatch ./scripts/slurm/improvement_evaluation_long-bt-pw-ss
+sbatch ./scripts/slurm/improvement_evaluation_long-bt-pw-sq
+sbatch ./scripts/slurm/improvement_evaluation_long-bt-oa-owf
+sbatch ./scripts/slurm/improvement_evaluation_long-bt-pw-owf
+sbatch ./scripts/slurm/improvement_evaluation_long-dual_cuts
+sbatch ./scripts/slurm/improvement_evaluation_long-obcg

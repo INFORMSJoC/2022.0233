@@ -1,0 +1,9 @@
+#!/bin/bash
+sbatch --array=2-6 ./scripts/slurm/improvement_evaluation-none
+sbatch --array=2-6 ./scripts/slurm/improvement_evaluation-bt-oa-ss
+sbatch --array=2-6 ./scripts/slurm/improvement_evaluation-bt-pw-ss
+sbatch --array=2-6 ./scripts/slurm/improvement_evaluation-bt-pw-sq
+sbatch --array=2-6 ./scripts/slurm/improvement_evaluation-bt-oa-owf
+sbatch --array=2-6 ./scripts/slurm/improvement_evaluation-bt-pw-owf
+sbatch --array=2-6 ./scripts/slurm/improvement_evaluation-dual_cuts
+sbatch --array=2-6 ./scripts/slurm/improvement_evaluation-obcg

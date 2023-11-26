@@ -1,0 +1,129 @@
+[TITLE]
+ Simple FSD Network - 24 Time Steps, Day 5
+
+[JUNCTIONS]
+;ID      Elev      Demand      Pattern
+ J1      0.0       158.0       demand ;
+ J2      0.0       0.0                ;
+
+[RESERVOIRS]
+;ID      Head      Pattern
+ R1      0.0              ;
+ R2      0.0              ;
+ R3      0.0              ;
+
+[TANKS]
+;ID      Elevation      InitLevel      MinLevel      MaxLevel      Diameter      MinVol      VolCurve
+ T1      33.0           0.6            0.0           7.0           9.440697      0.0                 ;
+
+[PIPES]
+;ID      Node1      Node2      Length      Diameter      Roughness      MinorLoss      Status
+ P1      J2         T1         1000.0      1000.0        14.708208       0.0            Open  ;
+ P2      T1         J1         1000.0      1000.0        16.710914       0.0            Open  ;
+
+[PUMPS]
+;ID          Node1      Node2      Parameters
+ PUMP_1      R1         J2         HEAD 123  ;
+ PUMP_2      R2         J2         HEAD 123  ;
+ PUMP_3      R3         J2         HEAD 123  ;
+
+[VALVES]
+;ID      Node1      Node2      Diameter      Type      Setting      MinorLoss   
+
+[TAGS]
+
+[DEMANDS]
+;Junction      Demand      Pattern      Category
+
+[STATUS]
+;ID      Status/Setting
+
+[PATTERNS]
+;ID          Multipliers
+ demand      0.400000 0.400000 0.435000 0.435000 0.602500 0.602500
+ demand      1.625000 1.625000 0.937500 0.937500 0.717500 0.717500
+ demand      0.802500 0.802500 1.137500 1.137500 1.437500 1.437500
+ demand      1.875000 1.875000 1.000000 1.000000 0.437500 0.437500
+ tariff      60.11250 60.11250 49.31000 49.31000 49.31000 49.31000
+ tariff      42.02750 42.02750 90.05500 90.05500 171.04500 171.04500
+ tariff      49.56000 49.56000 49.56000 49.56000 49.56000 49.56000
+ tariff      49.56000 49.56000 49.46250 49.46250 49.36500 49.36500
+
+[CURVES]
+;ID       X-Value      Y-Value
+ 123      0.0          53.659055
+ 123      61.0         48.687799
+ 123      122.0        33.774031
+
+[CONTROLS]
+
+[RULES]
+
+[ENERGY]
+ Global Efficiency     100.0
+ Global Price          1.0
+ Demand Charge         0.0
+ Pump   PUMP_1         Pattern      tariff
+ Pump   PUMP_2         Pattern      tariff
+ Pump   PUMP_3         Pattern      tariff
+
+[EMITTERS]
+;Junction      Coefficient
+
+[QUALITY]
+;Node      InitQual
+
+[SOURCES]
+;Node      Type      Quality      Pattern
+
+[REACTIONS]
+;Type      Pipe/Tank      Coefficient
+
+[REACTIONS]
+
+[MIXING]
+;Tank      Model
+
+[TIMES]
+ Duration                24:00
+ Hydraulic Timestep      1:00
+ Quality Timestep        1:00
+ Pattern Timestep        1:00
+ Pattern Start           0:00
+ Report Timestep         1:00
+ Report Start            0:00
+ Start ClockTime         12 AM
+ Statistic               NONE
+
+[REPORT]
+ Status       Yes
+ Summary      No
+ Page         0
+
+[OPTIONS]
+ Units                  LPS
+ Headloss               H-W
+ Specific Gravity       1.0
+ Viscosity              1.0
+ Trials                 200
+ Accuracy               0.00001
+ Unbalanced             Continue 100
+ Pattern                1
+ Demand Multiplier      1.0
+ Emitter Exponent       0.5
+ Quality                None mg/L
+ Diffusivity            1.0
+ Tolerance              0.001
+
+[COORDINATES]
+;Node   X-Coord  Y-Coord
+
+[VERTICES]
+;Link   X-Coord  Y-Coord
+
+[LABELS]
+;X-Coord   Y-Coord  Label & Anchor Node
+
+[BACKDROP]
+
+[END]

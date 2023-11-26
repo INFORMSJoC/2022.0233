@@ -1,0 +1,273 @@
+{
+    "per_unit": false,
+    "base_mass": 5.0e17,
+    "base_time": 360000.0,
+    "base_length": 17.5,
+    "base_head": 17.5,
+    "base_flow": 0.014887152777778,
+    "reservoir": {
+        "1": {
+            "flow_cost": 0.0
+        }
+    },
+    "pipe": {
+        "1": {
+            "flow_min": 0.0,
+            "flow_max": 0.041476
+        },
+        "2": {
+            "flow_min": 0.0,
+            "flow_max": 0.009145
+        },
+        "3": {
+            "flow_min": 0.0,
+            "flow_max": 0.032327
+        },
+        "4": {
+            "flow_min": 0.0,
+            "flow_max": 0.062387
+        },
+        "5": {
+            "flow_min": 0.0,
+            "flow_max": 0.058094
+        },
+        "6": {
+            "flow_min": 0.0,
+            "flow_max": 0.021716
+        },
+        "7": {
+            "flow_min": 0.0,
+            "flow_max": 0.010687
+        },
+        "8": {
+            "flow_min": 0.0,
+            "flow_max": 0.058094
+        },
+        "9": {
+            "flow_min": 0.0,
+            "flow_max": 0.058094
+        },
+        "10": {
+            "flow_min": 0.0,
+            "flow_max": 0.035688
+        },
+        "11": {
+            "flow_min": 0.0,
+            "flow_max": 0.058094
+        },
+        "12": {
+            "flow_min": 0.0,
+            "flow_max": 0.021716
+        },
+        "13": {
+            "flow_min": 0.0,
+            "flow_max": 0.004883
+        },
+        "14": {
+            "flow_min": 0.0,
+            "flow_max": 0.036353
+        },
+        "15": {
+            "flow_min": 0.0,
+            "flow_max": 0.010687
+        },
+        "16": {
+            "flow_min": -0.0357,
+            "flow_max": 0.057845
+        },
+        "17": {
+            "flow_min": 0.0,
+            "flow_max": 0.009701
+        },
+        "18": {
+            "flow_min": 0.0,
+            "flow_max": 0.006603
+        },
+        "19": {
+            "flow_min": 0.0,
+            "flow_max": 0.005974
+        },
+        "20": {
+            "flow_min": 0.0,
+            "flow_max": 0.00343
+        },
+        "21": {
+            "flow_min": 0.0,
+            "flow_max": 0.036353
+        },
+        "22": {
+            "flow_min": 0.0,
+            "flow_max": 0.026163
+        },
+        "23": {
+            "flow_min": 0.0,
+            "flow_max": 0.036353
+        },
+        "24": {
+            "flow_min": 0.0,
+            "flow_max": 0.046015
+        },
+        "25": {
+            "flow_min": 0.0,
+            "flow_max": 0.004883
+        },
+        "26": {
+            "flow_min": 0.0,
+            "flow_max": 0.004883
+        },
+        "27": {
+            "flow_min": 0.0,
+            "flow_max": 0.005926
+        },
+        "28": {
+            "flow_min": -0.00161,
+            "flow_max": 0.004493
+        },
+        "29": {
+            "flow_min": 0.0,
+            "flow_max": 0.003185
+        },
+        "30": {
+            "flow_min": 0.0,
+            "flow_max": 0.003008
+        },
+        "31": {
+            "flow_min": 0.0,
+            "flow_max": 0.003008
+        },
+        "32": {
+            "flow_min": 0.0,
+            "flow_max": 0.003008
+        },
+        "33": {
+            "flow_min": -0.000161,
+            "flow_max": 0.001861
+        },
+        "34": {
+            "flow_min": 0.0,
+            "flow_max": 0.046015
+        },
+        "35": {
+            "flow_min": 0.0,
+            "flow_max": 0.062394
+        },
+        "36": {
+            "flow_min": 0.0,
+            "flow_max": 0.062387
+        },
+        "37": {
+            "flow_min": 0.0,
+            "flow_max": 0.062387
+        },
+        "38": {
+            "flow_min": -0.035701,
+            "flow_max": 0.057845
+        },
+        "39": {
+            "flow_min": 0.0,
+            "flow_max": 0.062394
+        },
+        "40": {
+            "flow_min": 0.0,
+            "flow_max": 0.04602
+        },
+        "41": {
+            "flow_min": 0.0,
+            "flow_max": 0.012577
+        },
+        "42": {
+            "flow_min": 0.0,
+            "flow_max": 0.046015
+        },
+        "43": {
+            "flow_min": 0.0,
+            "flow_max": 0.005926
+        },
+        "44": {
+            "flow_min": 0.0,
+            "flow_max": 0.014748
+        }
+    },
+    "pump": {
+        "1": {
+            "max_switches": 6,
+            "min_active_time": 3600.0,
+            "min_inactive_time": 1800.0,
+            "flow_min": 0.0,
+            "flow_max": 0.046021,
+            "pump_type": 3,
+            "power_fixed": 29.477527,
+            "power_per_unit_flow": 703.68
+        },
+        "2": {
+            "max_switches": 6,
+            "min_active_time": 3600.0,
+            "min_inactive_time": 1800.0,
+            "flow_min": 0.0,
+            "flow_max": 0.046015,
+            "pump_type": 3,
+            "power_fixed": 30.711701,
+            "power_per_unit_flow": 643.479
+        },
+        "3": {
+            "max_switches": 6,
+            "min_active_time": 3600.0,
+            "min_inactive_time": 1800.0,
+            "flow_min": 0.0,
+            "flow_max": 0.058088,
+            "pump_type": 3,
+            "power_fixed": 16.306475,
+            "power_per_unit_flow": 101.238
+        },
+        "4": {
+            "max_switches": 6,
+            "min_active_time": 3600.0,
+            "min_inactive_time": 1800.0,
+            "flow_min": 0.0,
+            "flow_max": 0.036353,
+            "pump_type": 3,
+            "power_fixed": 8.116219,
+            "power_per_unit_flow": 272.533
+        },
+        "5": {
+            "max_switches": 6,
+            "min_active_time": 3600.0,
+            "min_inactive_time": 1800.0,
+            "flow_min": 0.0,
+            "flow_max": 0.004883,
+            "pump_type": 3,
+            "power_fixed": 3.025207,
+            "power_per_unit_flow": 705.811
+        },
+        "6": {
+            "max_switches": 6,
+            "min_active_time": 3600.0,
+            "min_inactive_time": 1800.0,
+            "flow_min": 0.0,
+            "flow_max": 0.010687,
+            "pump_type": 3,
+            "power_fixed": 6.152091,
+            "power_per_unit_flow": 545.615
+        },
+        "7": {
+            "max_switches": 6,
+            "min_active_time": 3600.0,
+            "min_inactive_time": 1800.0,
+            "flow_min": 0.0,
+            "flow_max": 0.002123,
+            "pump_type": 3,
+            "power_fixed": 0.718993,
+            "power_per_unit_flow": 525.845
+        }
+    },
+    "pump_group": {
+        "1": {
+            "pump_indices": [1, 2]
+        }
+    },
+    "tank_group": {
+        "1": {
+            "tank_indices": [1, 2, 3, 4, 5]
+        }
+    }
+}

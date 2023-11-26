@@ -1,0 +1,35 @@
+#!/bin/bash
+#SBATCH --exclusive
+#SBATCH --mail-user=btasseff@lanl.gov
+#SBATCH --mail-type=END
+#SBATCH --output=/dev/null --error=/dev/null
+
+# Set important environment variables first.
+source .profile
+
+# Read in the experiment CSV file and separate values by comma.
+EXPERIMENT_CSV_PATH="data/experiments/preprocessing/BT-PW-SS.csv"
+LINE_NUMBER=${SLURM_ARRAY_TASK_ID}
+LINE_STRING=$(sed "${LINE_NUMBER}q;d" ${EXPERIMENT_CSV_PATH})
+IFS=',' read -a PARAMETER_ARRAY <<< "${LINE_STRING}"
+
+# Set up variables for notational ease.
+INSTANCE_PATH=${PARAMETER_ARRAY[0]}
+RESULT_PATH=${PARAMETER_ARRAY[1]}
+LOG_PATH=${PARAMETER_ARRAY[2]}
+
+# Set up parameters for the solve process.
+export OMP_NUM_THREADS=1
+
+# Get the sysimage path.
+SYSIMAGE_PATH="scripts/precompilation/WaterModels.so"
+
+# Execute the script.
+julia \
+    -J${SYSIMAGE_PATH} \
+    --threads 128 \
+    scripts/execution/preprocessing-bt-pw-ss.jl \
+    --input_path ${INSTANCE_PATH} \
+    --output_path ${RESULT_PATH} \
+    --time_limit 28800.0 \
+    &> ${LOG_PATH}
